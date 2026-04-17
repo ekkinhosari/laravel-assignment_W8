@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->string('image_path')->nullable()->after('stock');
+            $table->softDeletes();
         });
     }
 
     public function down(): void
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('image_path');
+            $table->dropSoftDeletes();
         });
     }
 };

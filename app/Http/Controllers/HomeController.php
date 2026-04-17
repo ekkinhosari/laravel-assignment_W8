@@ -3,17 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ProductCategory;
 
 class HomeController extends Controller
 {
-    //
-    public function show(){
-        $category = "Mouse"
-        $button ="<button>Purchase/button";
-        return view('home',[
-            'product_name'=>'Logitech Superlight',
-            'product_categories'=>$category,
-            'button'=>$button
+    public function show()
+    {
+        return view('home', [
+            'product_categories' => ProductCategory::with(['products'])->get()
         ]);
+    }
+
+    public function store()
+    {
+        return view('store');
+    }
+
+    public function about()
+    {
+        return view('about');
     }
 }

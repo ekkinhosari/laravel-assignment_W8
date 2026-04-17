@@ -1,34 +1,29 @@
 <?php
 
-use App\Http\Controllers\FirstController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StoreController;
 
+// Redirect root ke home
 Route::get('/', function () {
-    dd('Hello World');
-    return view('welcome');
+    return redirect()->route('home');
 });
 
-Route::get('/hi', function () {
-    return "Hi All!";
-})->name('hi');
+// Home page
+Route::get('/home', [HomeController::class, 'show'])->name('home');
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
+// Store page
+Route::get('/store', [StoreController::class, 'show'])->name('store');
 
-Route::get('/home/sum', [FirstController::class, 'sum'
-])->name('home.sum');
+// About page
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 
-Route::get('/home', [HomeController::class, 'show'
-])->name('home.show');
+Route::get('/product/insert-form', [StoreController::class, 'product_insert_form'])->name('product_insert_form');
 
-Route::get('/store', function () {
-    return view('store');
-})->name('store');
+Route::post('/product/insert', [StoreController::class, 'insert_product'])->name('insert_product');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::get('/product/edit/{product_id}', [StoreController::class, 'product_edit_form'])->name('product_edit_form');
 
-Route::get('/store', [StoreController::class, 'show'
-])->name('store');
+Route::put('/product/update/{product_id}', [StoreController::class, 'update_product'])->name('update_product');
+
+Route::delete('/product/delete/{product_id}', [StoreController::class, 'delete_product'])->name('delete_product');
