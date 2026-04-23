@@ -15,7 +15,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             [
                 'name'        => 'Logitech MX Master 3',
-                'details' => 'Wireless ergonomic mouse',
+                'description' => 'Wireless ergonomic mouse',
                 'price'       => 850000,
                 'category_id' => 1,
                 'stock'       => 20,
@@ -24,7 +24,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'name'        => 'Mechanical Keyboard Keychron K2',
-                'details' => 'Compact TKL mechanical keyboard',
+                'description' => 'Compact TKL mechanical keyboard',
                 'price'       => 1200000,
                 'category_id' => 1,
                 'stock'       => 15,
@@ -33,7 +33,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'name'        => 'Samsung Monitor 27 inch',
-                'details' => 'IPS panel Full HD monitor',
+                'description' => 'IPS panel Full HD monitor',
                 'price'       => 3500000,
                 'category_id' => 1,
                 'stock'       => 8,
@@ -42,7 +42,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'name'        => 'Anker USB-C Hub',
-                'details' => '7-in-1 USB-C hub for laptop',
+                'description' => '7-in-1 USB-C hub for laptop',
                 'price'       => 450000,
                 'category_id' => 1,
                 'stock'       => 30,
@@ -51,7 +51,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'name'        => 'Kaos Polos Oversize',
-                'details' => 'Bahan cotton combed 30s',
+                'description' => 'Bahan cotton combed 30s',
                 'price'       => 120000,
                 'category_id' => 2,
                 'stock'       => 100,
@@ -60,7 +60,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'name'        => 'Celana Jogger Panjang',
-                'details' => 'Bahan fleece tebal, nyaman dipakai harian',
+                'description' => 'Bahan fleece tebal, nyaman dipakai harian',
                 'price'       => 175000,
                 'category_id' => 2,
                 'stock'       => 50,
@@ -69,7 +69,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'name'        => 'Jaket Hoodie Polos',
-                'details' => 'Hoodie unisex bahan fleece',
+                'description' => 'Hoodie unisex bahan fleece',
                 'price'       => 280000,
                 'category_id' => 2,
                 'stock'       => 40,
@@ -78,7 +78,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'name'        => 'Atomic Habits - James Clear',
-                'details' => 'Buku self-improvement tentang kebiasaan kecil',
+                'description' => 'Buku self-improvement tentang kebiasaan kecil',
                 'price'       => 98000,
                 'category_id' => 3,
                 'stock'       => 25,
@@ -87,7 +87,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'name'        => 'Rich Dad Poor Dad - Robert Kiyosaki',
-                'details' => 'Buku finansial klasik wajib baca',
+                'description' => 'Buku finansial klasik wajib baca',
                 'price'       => 85000,
                 'category_id' => 3,
                 'stock'       => 20,
@@ -96,7 +96,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'name'        => 'The Psychology of Money - Morgan Housel',
-                'details' => 'Cara berpikir tentang uang dan investasi',
+                'description' => 'Cara berpikir tentang uang dan investasi',
                 'price'       => 95000,
                 'category_id' => 3,
                 'stock'       => 18,
